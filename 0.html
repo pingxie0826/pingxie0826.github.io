@@ -1,0 +1,228 @@
+                       error_reporting(E_ALL ^ E_NOTICE);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #btn 
+		{
+            width: 130px;
+            height: 60px;
+            font-size: 12px;
+            border: 1px solid red;
+            color: blueviolet;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: white;
+        }
+        #author 
+		{
+            width: 130px;
+            height: 80px;
+            font-size: 16px;
+            border: 1px solid red;
+            color: lightseagreen;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            background: white;
+            text-align: center;
+        }
+        body 
+		{
+            background: url("a1.jpg") no-repeat;
+        }
+        .box 
+		{
+            width: 1000px;
+            margin: 30px auto;
+            height: 600px;
+        }
+        .title 
+		{
+            text-align: center;
+            color: red;
+        }
+        .box .left 
+		{
+            padding-top: 70px;
+            float: left;
+            width: 330px;
+            height: 530px;
+        }
+        .box .right 
+		{
+            float: right;
+            height: 600px;
+            width: 570px;
+        }
+        ul
+		{
+            list-style-type: none;
+            margin: 70px 0 0 0;
+            padding: 0;
+        }
+        .left li 
+		{
+            width: 70px;
+            margin-left: 10px;
+            margin-top: 7px;
+            float: left;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 20px;
+            color: blue;
+        }
+        .right li 
+		{
+            width: 70px;
+            margin-left: 10px;
+            margin-top: 7px;
+            float: left;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 20px;
+            color: blue;
+        }
+        .box .right span 
+		{
+            width: 70px;
+            margin-left: 10px;
+            margin-top: 7px;
+            float: left;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+        }
+        .box .left span 
+		{
+            width: 70px;
+            margin-left: 10px;
+            margin-top: 7px;
+            float: left;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+        }
+    </style>
+	<script src='jquery-1.12.4.js'></script>
+	<script src='jquery-1.7.js'></script>
+	<script>
+	<!--
+		$(function()
+		{
+			var lis = document.getElementsByTagName("li");
+			//alert(lis.length);
+			var times;
+			var j = 0;
+			$("#kaishi").click(function()
+			{
+				j++;
+				 if (j % 2 != 0) 
+				 {
+					times = setInterval(function ()
+					{
+						for (var i = 0; i < lis.length; i++) 
+						{
+							lis[i].style.backgroundColor = "";
+						}
+						 var xcolor = parseInt(Math.random() * 49 );
+        
+						 lis[xcolor].style.backgroundColor = "hotpink";
+              
+					 }, 10);
+				}
+				else
+				{
+					clearInterval(times);
+				}
+				document.getElementsByTagName
+			});
+		});
+	-->
+	</script>
+</head>
+<body>
+<div id="btn">
+	<input type='button' value='开始'id='kaishi'>
+</div>
+<h2 class="title">php班人员座位表</h2>
+<div class="box">
+    <div class="left">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul class="uu">
+            <li>李嘉明</li>
+            <li>马鹤元</li>
+            <li>张新豹</li>
+            <li>雷桂鑫</li>
+            <li>王宇</li>
+            <li>梁鼎玮</li>
+            <li>底全旺</li>
+            <li>肖璐宽</li>
+            <li>李凯龙</li>
+            <li>赵雅静</li>
+            <li>邢一鸣</li>
+            <li>张亚朋</li>
+            <li>毛宁</li>
+            <li>崔博文</li>
+            <li>续安昊</li>
+            <li>曹永康</li>
+        </ul>
+    </div>
+    <div class="right">
+        <span></span>
+        <span></span>
+        <ul class="uu">
+            <li>霍子康</li>
+            <li>李国帅</li>
+            <li>李世雄</li>
+            <li>遆思凡</li>
+        </ul>
+        <span></span>
+        <ul class="uu">
+            <li>姚江江</li>
+            <li>崔奎亚</li>
+            <li>霍子康</li>
+            <li>吕静</li>
+            <li>林彬彬</li>
+            <li>孙雨萱</li>
+            <li>吴江萌</li>
+            <li>任秀青</li>
+            <li>武欣宜</li>
+            <li>申通通</li>
+             <li>张壮壮</li>
+            <li>赵晓飞</li>
+            <li>李泽尧</li>
+            <li>秦泽龙</li>
+            <li>王广吉</li>
+			<li>魏河林</li>
+            <li>刘建伟</li>
+            <li>袁恒学</li>
+            <li>李泽涛</li>
+            <li>党晨宇</li>
+            <li>梁家伟</li>
+            <li>王梓涵</li>
+            <li>王慧勇</li>
+            <li>王天天</li>
+            <li> 成天乐</li>
+              <li>闫文光</li>
+            <li>李浩然</li>
+            <li>吴传巍</li>
+            <li>周涛</li>
+            <li>张亚鑫</li>
+        </ul>
+    </div>
+</div>
+<div id="author">
+    <p>1003作业</p>
+    <p>吴江萌</p>
+</div>
+</body>
+</html>
