@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>后台登录</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style>
+body{height:100%;background:#16a085;overflow:hidden;}
+canvas{z-index:-1;position:absolute;}
+</style>
+<script src="js/jquery.js"></script>
+<script src="js/verificationNumbers.js"></script>
+<script src="js/Particleground.js"></script>
+<script>
+$(document).ready(function() {
+  //粒子背景特效
+  $('body').particleground({
+    dotColor: '#5cbdaa',
+    lineColor: '#5cbdaa'
+  });
+  //验证码
+  createCode();
+});
+function change()
+	{
+		$("#auth").attr("src","code.php?"+Math.random());
+	}
+</script>
+</head>
+<body>
+<dl class="admin_login">
+ <dt>
+  <strong>高校智能管理系统</strong>
+  <em>Management System</em>
+  </dt>
+  <form action='login_verify.php' method='post' onsubmit='return validate();'>
+ <dd class="user_icon">
+  <input type="text" placeholder="账号" class="login_txtbx" name='uname'/>
+ </dd>
+ <dd class="pwd_icon">
+  <input type="password" placeholder="密码" class="login_txtbx" name='upwd'/>
+ </dd>
+ <dd class="val_icon">
+  <input type='text' name='auths' placeholder="验证码"class='bt1' style="padding-left:30px; width:130px;" >
+<img src='code.php' width='80px' height='40' id='auth'>
+<a href='javascript:;' onclick='change();' style="color:red;">换一张</a><br>
+</dd>
+
+	<input type='radio' name='urole' value='学生' checked>学生
+	<input type='radio' name='urole' value='老师'>老师
+	<input type='radio' name='urole' value='管理员'>管理员<br>
+	<a href='register.html' style="padding-left:170px;color:black;">若没有账号,请先<font color='blue'>注册</font></a>
+
+ <dd>
+  <input type="submit" value="立即登陆" class='submit_btn'/>
+  </dd>
+  </form>
+ <dd>
+  <p>© 2017-2018 PHP班 版权所有</p>
+  <p>陕B2-20080224-1</p>
+ </dd>
+</dl>
+</body>
+</html>
