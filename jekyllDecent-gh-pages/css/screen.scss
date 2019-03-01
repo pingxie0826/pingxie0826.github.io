@@ -1,0 +1,26 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+# color-profile datalist merged with forked file.
+---
+
+@import 'https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield|Merriweather:300italic,700,300,700italic|Open+Sans:400,700';
+@import 'normalize';
+@import 'general';
+@import 'utilities';
+@import 'icon-icomoon';
+@import 'main';
+@import 'post';
+@import 'index-page';
+@import 'about-page';
+@import 'prism';
+@import 'author';
+@import 'cv';
+@import 'media1080';
+@import 'media780';
+@import 'media500';
+@import 'photoswipe';
+@import 'photoswipe-default-skin';
+@import '404';
+@import "prism";
+@import 'override';

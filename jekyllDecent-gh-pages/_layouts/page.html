@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<main class="content" role="main">
+    <article class="post single-post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header short-diver">
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>           
+        </header>
+        <section class="post-content short-diver" itemprop="articleBody">
+            {{content}}
+        </section>
+    </article>
+</main>
+
+{% include photoswipe.html %}
+{% include post_scripts.html %}

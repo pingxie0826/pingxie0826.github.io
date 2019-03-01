@@ -1,0 +1,27 @@
+{% if page.cover %}
+{% assign cover = page.cover %}
+{% elsif site.cover %}
+{% assign cover = site.cover %}
+{% endif %}
+
+<header class="main-header detail-page image-bg {% if cover %} has-cover" style="background-image: url({{ cover | absolute_url }})" {% else %} no-cover" {% endif %}>
+    <h1 class="page-title"><a href="{{ "/" | absolute_url }}" title="{{ site.title }}">{{ site.title }}</a></h1>
+    <h2 class="page-description">{{ site.subtitle }}</h2>
+    <div class="nav">
+            <a class="page-link" href="{{ "/" | absolute_url }}" title="Home">Home</a>
+
+            {% assign pages = site.pages | sort:"weight"  %}
+            {% for my_page in pages %}
+
+            {% if my_page.menutitle %}
+            {% assign title = my_page.menutitle %}
+            {% elsif site.title %}
+            {% assign title = my_page.title %}
+            {% endif %}
+
+            {% if title and my_page.visible != false %}
+            <a class="page-link" href="{{ my_page.url | absolute_url }}" title="{{ title }}">{{ title }}</a>
+            {% endif %}
+            {% endfor %}
+    </div>
+</header>

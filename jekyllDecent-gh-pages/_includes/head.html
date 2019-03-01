@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  
+    {% if page.tags %}
+    <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}" />
+    {% elsif page.keywords %}
+    <meta name="keywords" content="{{ page.keywords | split: ' ' | join: ', ' | escape }}" />
+	{% elsif site.keywords %}
+    <meta name="keywords" content="{{ site.keywords | split: ' ' | join: ', ' | escape }}" />
+    {% endif %}
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+	
+    {% include ogp.html %}	
+	{% include twitter-meta.html %}	
+	{% include citation_meta.html %}	
+
+    <link rel="stylesheet" href="{{ "/css/screen.css" | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url  }}">
+
+    <!-- https://github.com/joshbuchea/HEAD -->
+    <link rel="icon" href="{{ "/assets/favicon-16.png" | absolute_url }}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{{ "/assets/favicon-32.png" | absolute_url }}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{ "/assets/favicon-48.png" | absolute_url }}" sizes="48x48" type="image/png">
+    <link rel="icon" href="{{ "/assets/favicon-62.png" | absolute_url }}" sizes="62x62" type="image/png">
+</head>
