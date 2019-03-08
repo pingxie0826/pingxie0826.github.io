@@ -1,0 +1,28 @@
+language: ruby
+cache: bundler
+
+rvm:
+  - 2.4.4
+
+install:
+  - gem install github-pages
+  - gem install html-proofer
+  - gem install jekyll-mentions
+  - gem install jekyll-feed
+  - gem install jekyll-sitemap
+  - gem install jekyll-redirect-from
+  
+script:
+  - bundle install
+  - bundle exec jekyll build
+  # - bundle exec htmlproofer ./_site --only-4xx --check-favicon --url_ignore [".*"] --alt_ignore [".*"]
+
+# branch whitelist, only for GitHub Pages
+branches:
+  only:
+  - gh-pages     # test the gh-pages branch
+  - /pages-(.*)/ # test every branch which starts with "pages-"
+
+sudo: false
+
+# Check validity of the file via: http://lint.travis-ci.org/
